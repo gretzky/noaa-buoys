@@ -1,4 +1,4 @@
-import { getDistanceToBuoy, findNearestBuoys } from "../src/findNearestBuoy";
+import { getDistanceToBuoy, findNearestBuoys } from "../src/findNearestBuoys";
 import buoys from "../src/buoys";
 
 describe("buoy distances", () => {
