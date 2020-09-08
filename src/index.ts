@@ -1,4 +1,4 @@
-import buoys from './buoys'
+import buoys from "./buoys";
 
-export * from './types'
-export default buoys
+export * from "./types";
+export default buoys;

@@ -39,7 +39,7 @@ export enum StatesTerritories {
   UM = "United States Minor Outlying Islands",
   GU = "Guam",
   TK = "Tokelau",
-  BM = "Bermuda"
+  BM = "Bermuda",
 }
 
 export enum Countries {
@@ -50,7 +50,7 @@ export enum Countries {
   NZ = "New Zealand",
   AG = "Antigua and Barbuda",
   BS = "Bahamas",
-  BOTS = "British Overseas Territory"
+  BOTS = "British Overseas Territory",
 }
 
 export enum TimeZones {
@@ -70,7 +70,7 @@ export enum TimeZones {
   NIUE = "Pacific/Niue",
   ETC = "Etc/GMT+12",
   EASTER_ISLAND = "Pacific/EasterIsland",
-  FAKAOFO = "Pacific/Fakaofo"
+  FAKAOFO = "Pacific/Fakaofo",
 }
 
 export interface Buoy {
@@ -89,5 +89,5 @@ export interface Buoy {
 
 export enum BuoyTypes {
   TIDE = "tide",
-  CURRENT = "current"
+  CURRENT = "current",
 }

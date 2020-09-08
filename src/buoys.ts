@@ -1,4 +1,4 @@
-import { TimeZones, StatesTerritories, BuoyTypes, Countries } from './types'
+import { TimeZones, StatesTerritories, BuoyTypes, Countries } from "./types";
 
 export default [
   {
