@@ -1,6 +1,8 @@
 # noaa-buoys
 
-All active and inactive (but still reporting data) NOAA tide buoys.
+All active and inactive* NOAA tide buoys.
+
+<sup>*but still reporting data</sup>
 
 ## Usage
 
