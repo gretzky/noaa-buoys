@@ -2,7 +2,7 @@
 
 All active and inactive* NOAA tide buoys.
 
-<sup>*but still reporting data</sup>
+<sup>*but still reporting some computed data</sup>
 
 ## Usage
 
