@@ -1,0 +1,19 @@
+[
+  "America/Chicago",
+  "America/Detroit",
+  "America/New_York",
+  "America/Puerto_Rico",
+  "America/Port_of_Spain",
+  "Pacific/Guam",
+  "Pacific/Kwajalein",
+  "Alaska/Anchorage",
+  "Atlantic/Bermuda",
+  "Pacific/Wake",
+  "America/Los_Angeles",
+  "Pacific/Honolulu",
+  "Pacific/Pago_Pago",
+  "Pacific/Niue",
+  "Etc/GMT+12",
+  "Pacific/EasterIsland",
+  "Pacific/Fakaofo"
+]
