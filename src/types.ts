@@ -79,11 +79,11 @@ export interface Buoy {
   secondaryName?: Nullable<string>;
   stateTerritory?: Nullable<keyof typeof StatesTerritories>;
   stateAbbrev?: Nullable<StatesTerritories[keyof StatesTerritories]>;
-  country: keyof typeof Countries;
+  country: Countries[keyof Countries];
   latitude: number;
   longitude: number;
   type: string;
-  timeZone: keyof typeof TimeZones;
+  timeZone: TimeZones[keyof TimeZones];
   isActive: boolean;
 }
 

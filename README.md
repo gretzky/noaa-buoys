@@ -1,6 +1,6 @@
 # noaa-buoys
 
-All active and inactive NOAA tide buoys. (Current buoys TBD).
+All active and inactive (but still reporting data) NOAA tide buoys.
 
 ## Usage
 
@@ -10,22 +10,10 @@ yarn add noaa-buoys
 npm install --save noaa-buoys
 ```
 
-### Methods
-
 ```js
 import buoys from 'noaa-buoys';
 
-// returns all buoys (active/inactive, tides/currents)
-const allBuoys = buoys.getAll();
-
-// returns all tide buoys (active and inactive)
-const tideBuoys = buoys.getTides();
-
-// returns all active buoys (tides/currents)
-const activeBuoys = buoys.getActive();
-
-// returns all inactive buoys
-const inactiveBuoys = buoys.getInactive();
+buoys.map(buoy => buoy.id) // get all buoy ids
 ```
 
 A single buoy is an object with the following params:
