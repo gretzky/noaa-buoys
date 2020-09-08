@@ -1,4 +1,4 @@
-type Nullable<T> = T | null | undefined;
+type Nullable<T> = T | null;
 
 export enum StatesTerritories {
   WI = "Wisconsin",
@@ -87,7 +87,7 @@ export interface Buoy {
   isActive: boolean;
 }
 
-export enum StationTypes {
+export enum BuoyTypes {
   TIDE = "tide",
   CURRENT = "current"
 }

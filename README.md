@@ -10,10 +10,10 @@ yarn add noaa-buoys
 npm install --save noaa-buoys
 ```
 
-```js
-import buoys from 'noaa-buoys';
+```ts
+import buoys, { Buoy, TimeZones } from 'noaa-buoys';
 
-buoys.map(buoy => buoy.id) // get all buoy ids
+const tz: TimeZones[] = buoys.map((buoy: Buoy) => buoy.timeZones) // get all buoy timezones
 ```
 
 A single buoy is an object with the following params:
