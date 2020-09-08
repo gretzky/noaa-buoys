@@ -1,4 +1,5 @@
 import buoys from "./buoys";
 
-export * from "./types";
+export { Buoy, BuoyWithDistance } from "./types";
+export { findNearestBuoys } from "./findNearestBuoys";
 export default buoys;

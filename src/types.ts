@@ -129,7 +129,7 @@ export interface Buoy {
   isActive: boolean;
 }
 
-export interface BuoyWithUserDistance extends Buoy {
+export interface BuoyWithDistance extends Buoy {
   distanceFromUser: number;
 }
 

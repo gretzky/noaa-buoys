@@ -3,7 +3,7 @@ import buoys from "./buoys";
 import {
   Nullable,
   Buoy,
-  BuoyWithUserDistance,
+  BuoyWithDistance,
   Coords,
   FindBuoysParams,
 } from "./types";
@@ -85,13 +85,10 @@ const findNearestBuoys = ({
   units,
   numBuoys,
   stations,
-}: Omit<
-  FindBuoysParams,
-  "onlyActiveBuoys"
->): Nullable<BuoyWithUserDistance[]> => {
+}: Omit<FindBuoysParams, "onlyActiveBuoys">): Nullable<BuoyWithDistance[]> => {
   const allBuoys = stations ?? buoys;
 
-  const buoyWithDistance = (buoy: Buoy): BuoyWithUserDistance => {
+  const buoyWithDistance = (buoy: Buoy): BuoyWithDistance => {
     const buoyLocation = {
       latitude: buoy.latitude,
       longitude: buoy.longitude,
