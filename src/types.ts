@@ -1,4 +1,9 @@
-type Nullable<T> = T | null;
+export type Nullable<T> = T | null | undefined;
+
+export interface Coords {
+  latitude: number;
+  longitude: number;
+}
 
 export enum StatesTerritoriesAbbrev {
   WI = "WI",
@@ -124,7 +129,19 @@ export interface Buoy {
   isActive: boolean;
 }
 
+export interface BuoyWithUserDistance extends Buoy {
+  distanceFromUser: number;
+}
+
 export enum BuoyTypes {
   TIDE = "tide",
   CURRENT = "current",
+}
+
+export interface FindBuoysParams {
+  location: Coords;
+  units: string;
+  stations?: Buoy[];
+  numBuoys?: number;
+  onlyActiveBuoys?: boolean;
 }
