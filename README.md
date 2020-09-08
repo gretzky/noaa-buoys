@@ -1,6 +1,6 @@
 # noaa-buoys
 
-All active and inactive NOAA tides and currents buoys.
+All active and inactive NOAA tide buoys. (Current buoys TBD).
 
 ## Usage
 
@@ -21,41 +21,27 @@ const allBuoys = buoys.getAll();
 // returns all tide buoys (active and inactive)
 const tideBuoys = buoys.getTides();
 
-// returns all current buoys (active and inactive)
-const currentBuoys = buoys.getCurrents();
-
 // returns all active buoys (tides/currents)
-const activeBuoys = buoys.getAllActive();
-
-// returns all active tide buoys
-const activeTideBuoys = buoys.getActiveTides();
-
-// returns all active current buoys
-const activeCurrentBuoys = buoys.getActiveCurrents();
+const activeBuoys = buoys.getActive();
 
 // returns all inactive buoys
-const inactiveBuoys = buoys.getAllInactive();
-
-// returns inactive tide buoys
-const inactiveTideBuoys = buoys.getInactiveTides();
-
-// returns inactive current buoys
-const inactiveCurrentBuoys = buoys.getInactiveCurrents();
+const inactiveBuoys = buoys.getInactive();
 ```
 
 A single buoy is an object with the following params:
 
 ```ts
 {
-  id: number | string;
-  name: string;
-  secondaryName: string;
-  state: string;
-  stateAbbrev: string;
-  country: string;
-  latitude: number;
-  longitude: number;
-  stationType: 'tide' | 'current';
-  type: 'harmonic' | 'subordinate'; // harmonic = active, subordinate = inactive
+  id: string; // NOAA buoy ID
+  name: string; // NOAA station name
+  secondaryName: string; // some NOAA stations have long / descriptive names, those are added here
+  state: string | null; // US state or territory (null if non-US)
+  stateAbbrev: string | null; // US state abbrev (null if non-US or US outlying island)
+  country: string; // full country name
+  latitude: number; // in degrees,decimal minutes
+  longitude: number; // in degrees,decimal minutes
+  type: 'tide' | 'current'; // the type of station
+  timeZone: string; // tz database timezone
+  isActive: boolean; // whether or not the station is still in use
 }
 ```
