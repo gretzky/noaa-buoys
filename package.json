@@ -1,7 +1,7 @@
 {
   "name": "noaa-buoys",
   "author": "gretzky",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/noaa-buoys.esm.js",
