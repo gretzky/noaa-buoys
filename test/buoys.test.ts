@@ -1,4 +1,5 @@
-import buoys, { TimeZones, StatesTerritories } from "../src";
+import buoys from "../src";
+import { TimeZones, StatesTerritories } from "../src/types";
 
 describe("buoys", () => {
   it("gets all buoys", () => {

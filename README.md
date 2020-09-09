@@ -15,11 +15,11 @@ npm install --save noaa-buoys
 This package exports a function to find the nearest buoys to a given location, as well as the list of buoys themselves.
 
 ```ts
-import buoys, { findNearestBuoys, Buoy, TimeZones } from "noaa-buoys";
+import buoys, { findNearestBuoys, Buoy } from "noaa-buoys";
 
-const tz: TimeZones[] = buoys.map((buoy: Buoy) => buoy.timeZones); // get all buoy timezones
+const tz: string[] = buoys.map((buoy: Buoy) => buoy.timeZones); // get all buoy timezones
 
-const nearestBuoys = findNearestBuoys({
+const nearestBuoys: Buoy = findNearestBuoys({
   location: {
     latitude: 44.210265,
     longitude: -69.065552,

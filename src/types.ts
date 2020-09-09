@@ -127,10 +127,7 @@ export interface Buoy {
   type: string;
   timeZone: TimeZones[keyof TimeZones];
   isActive: boolean;
-}
-
-export interface BuoyWithDistance extends Buoy {
-  distanceFromUser: number;
+  distanceFromUser?: Nullable<number>;
 }
 
 export enum BuoyTypes {

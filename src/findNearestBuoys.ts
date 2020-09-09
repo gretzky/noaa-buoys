@@ -1,14 +1,7 @@
 import * as R from "ramda";
 import buoys from "./buoys";
-import {
-  Nullable,
-  Buoy,
-  BuoyWithDistance,
-  Coords,
-  FindBuoysParams,
-} from "./types";
+import { Nullable, Buoy, Coords, FindBuoysParams } from "./types";
 
-// https://en.wikipedia.org/wiki/Haversine_formula
 const haversine = (givenLocation: Coords, buoyLocation: Coords): number => {
   const degreeDistance = (a: number, b: number): number =>
     R.multiply(R.divide(Math.PI, 180), R.subtract(a, b));
@@ -16,6 +9,8 @@ const haversine = (givenLocation: Coords, buoyLocation: Coords): number => {
   const radians = (degree: number): number =>
     R.divide(R.multiply(Math.PI, degree), 180);
 
+  // https://en.wikipedia.org/wiki/Haversine_formula
+  // good luck everybody else
   return R.multiply(
     2,
     Math.asin(
@@ -85,10 +80,10 @@ const findNearestBuoys = ({
   units,
   numBuoys,
   stations,
-}: Omit<FindBuoysParams, "onlyActiveBuoys">): Nullable<BuoyWithDistance[]> => {
+}: Omit<FindBuoysParams, "onlyActiveBuoys">): Nullable<Buoy[]> => {
   const allBuoys = stations ?? buoys;
 
-  const buoyWithDistance = (buoy: Buoy): BuoyWithDistance => {
+  const Buoy = (buoy: Buoy): Buoy => {
     const buoyLocation = {
       latitude: buoy.latitude,
       longitude: buoy.longitude,
@@ -108,7 +103,7 @@ const findNearestBuoys = ({
 
   const stationsByDistance = R.compose(
     R.sort(R.ascend(R.prop("distanceFromUser"))),
-    R.map(buoyWithDistance)
+    R.map(Buoy)
   )(allBuoys);
 
   if (!numBuoys) {
