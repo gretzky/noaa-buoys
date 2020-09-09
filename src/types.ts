@@ -1,8 +1,8 @@
 export type Nullable<T> = T | null | undefined;
 
 export interface Coords {
-  latitude: number;
-  longitude: number;
+  latitude: Nullable<number>;
+  longitude: Nullable<number>;
 }
 
 export enum StatesTerritoriesAbbrev {

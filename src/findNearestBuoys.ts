@@ -18,17 +18,23 @@ const haversine = (givenLocation: Coords, buoyLocation: Coords): number => {
         R.add(
           Math.pow(
             Math.sin(
-              degreeDistance(givenLocation.latitude, buoyLocation.latitude) / 2
+              R.divide(
+                degreeDistance(givenLocation.latitude, buoyLocation.latitude),
+                2
+              )
             ),
             2
           ),
           R.multiply(
             Math.pow(
               Math.sin(
-                degreeDistance(
-                  givenLocation.longitude,
-                  buoyLocation.longitude
-                ) / 2
+                R.divide(
+                  degreeDistance(
+                    givenLocation.longitude,
+                    buoyLocation.longitude
+                  ),
+                  2
+                )
               ),
               2
             ),
@@ -80,7 +86,7 @@ const findNearestBuoys = ({
   units,
   numBuoys,
   stations,
-}: Omit<FindBuoysParams, "onlyActiveBuoys">): Nullable<Buoy[]> => {
+}: Omit<FindBuoysParams, "onlyActiveBuoys">): Nullable<Buoy[] | Buoy> => {
   const allBuoys = stations ?? buoys;
 
   const Buoy = (buoy: Buoy): Buoy => {
